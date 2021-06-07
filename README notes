@@ -1,0 +1,35 @@
+Password Hashing
+
+# User SignUp Flow
+-User signs up with username/email and Password
+-Saved to database
+-When signing in, matches and verifies it is user and allows user in
+
+# Why we need password hashing?
+-We need to protect our users' information from hackers
+-By hashing (breaking it down to be unrecognizable) we are able to protect those passwords
+-Hashing in cryptography:
+    Convert Data of variable size to fixed size using hash function
+-Hashing is different from encryption. 
+    Encrypted data can be decrypted back to original form, hash cannot
+
+# How Does It Work?
+-password is created
+-hashing function converts password before saving it to database
+    -how does it match up if it is impossible to convert back to the original input?
+        When we login, the hash is reapplied to the password we input
+        That hash is then compared to the saved hash in our database created at signup
+
+# Adding Salt
+-To avoid getting access to other people's passwords
+-Like we add salt to our food we add salt to our passwords
+-Salt is a random string that is appended or prepended to our hash before hashing
+    -This is done right before the hash function
+    -By doing this, it is almost impossible for ner-do-wells to trace back and guess the initial password
+
+# How Salt Works
+    -say our pass is Meowywowy2
+    -Salt is added such as 7hdya73hq
+    -from there the Salt is added to the pass either as 7hdya73hqMeowywowy2 or 7hdya73hqMeowywowy2
+    -It is then hashed as #*@&HR#%Q()
+        
