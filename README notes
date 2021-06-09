@@ -32,4 +32,7 @@ Password Hashing
     -Salt is added such as 7hdya73hq
     -from there the Salt is added to the pass either as 7hdya73hqMeowywowy2 or 7hdya73hqMeowywowy2
     -It is then hashed as #*@&HR#%Q()
-        
+
+
+# QR CODE GENERATOR
+    -
